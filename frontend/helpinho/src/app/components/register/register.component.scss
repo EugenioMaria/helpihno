@@ -1,0 +1,50 @@
+.register-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+mat-card {
+    box-shadow: none !important;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+  
+mat-checkbox {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+  
+button.full-width {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-button img {
+    height: 20px;
+    margin-right: 10px;
+}
+  
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #d81b60;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,37 @@
+<app-unlogged-page [contentTemplate]="template"></app-unlogged-page>
+
+<ng-template #template>
+  <div class="container">
+    <div class="row">
+      <div class="login-container col">
+        <mat-card>
+          <h1>Bem vindo de volta!</h1>
+          <p>Entre e ajude os helpinho de hoje</p>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" placeholder="Seu melhor email">
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Senha</mat-label>
+              <input matInput type="password" formControlName="password" placeholder="Senha">
+            </mat-form-field>
+  
+            <mat-checkbox formControlName="rememberMe">Remember for 30 days</mat-checkbox>
+  
+            <div class="forgot-password">
+              <a href="#">Esqueceu senha?</a>
+            </div>
+  
+            <button mat-raised-button color="accent" class="full-width" type="submit">Entrar</button>
+            <button mat-raised-button color="white" class="full-width google-button">
+              <img src="assets/images/google-logo.png" alt="Google Logo"> Continuar com Google
+            </button>
+          </form>
+          <p>Ainda não faz parte do helpinho? <a href="/register">Registre-se grátis</a></p>
+        </mat-card>
+      </div>
+    </div>
+  </div>  
+</ng-template>

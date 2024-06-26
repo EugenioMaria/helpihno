@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="instructions">
+      <div class="step">
+        <h1>1. Escolha</h1>
+        <p>Escolha um helpinho que deseja ajudar</p>
+      </div>
+      <div class="step">
+        <h1>2. Doe</h1>
+        <p>O valor é você quem decide e ele vai todo para quem escolher</p>
+      </div>
+      <div class="step">
+        <h1>3. Aproveite</h1>
+        <p>Dar gera felicidade e ver pra quem recebeu.</p>
+      </div>
+      <div class="step">
+        <h1>4. Acompanhe</h1>
+        <p>Fique ligado, e veja se o helpinho alcançou o objetivo</p>
+      </div>
+    </div>
+  
+    <mat-form-field class="col-8">
+      <mat-label>Pesquise o que você quer dar um helpinho</mat-label>
+      <input matInput>
+    </mat-form-field>
+  
+    <mat-form-field class="m-4 col-3">
+      <mat-label>Escolha uma categoria</mat-label>
+      <mat-select>
+        <mat-option value="1">Categoria 1</mat-option>
+        <mat-option value="2">Categoria 2</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <div class="helpinhos">
+      <mat-card class="helpinho-card" *ngFor="let helpinho of helpinhos">
+        <img mat-card-image [src]="helpinho.image" alt="helpinho image">
+        <mat-card-content>
+          <h3 mat-card-title>{{ helpinho.title }}</h3>
+          <p mat-card-subtitle>{{ helpinho.category }}</p>
+          <p>{{ helpinho.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="avatars">
+            <img *ngFor="let avatar of helpinho.avatars" [src]="avatar" alt="avatar" class="avatar">
+          </div>
+          <p>+{{ helpinho.extraAvatars }}</p>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  
+    <button mat-raised-button color="primary" class="load-more">Carregando mais helpinhos</button>
+  </div>
+  

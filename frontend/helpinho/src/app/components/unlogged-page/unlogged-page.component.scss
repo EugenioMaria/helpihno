@@ -1,0 +1,129 @@
+.head {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .generic-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: 30vw;
+    margin: auto
+  }
+  
+  .mat-card {
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .half-width {
+    width: calc(50% - 0.5rem);
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .google-button img {
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .forgot-password {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #d81b60;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 50px;
+  }
+  
+  .text-overlay h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .text-overlay p {
+    margin: 0;
+  }
+  
+  .navigation-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .navigation-buttons button {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+
+  .round-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .round-button mat-icon {
+    font-size: 24px;
+  }
+  
+  .round-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  

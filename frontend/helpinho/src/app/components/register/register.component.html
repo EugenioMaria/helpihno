@@ -1,0 +1,43 @@
+<app-unlogged-page [contentTemplate]="template"></app-unlogged-page>
+
+<ng-template #template>
+    <mat-card>
+        <h1>Registre-se grátis</h1>
+        <p>Seja bem-vindo! Estamos felizes em tê-lo na nossa rede apoio</p>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="name" placeholder="Como podemos lhe chamar">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Escreva seu melhor email">
+            </mat-form-field>
+
+            <div class="form-row row">
+                <mat-form-field appearance="fill" class="half-width col">
+                    <mat-label>CPF/CNPJ</mat-label>
+                    <input matInput formControlName="cpfCnpj" placeholder="000.000.000-00">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="half-width col">
+                    <mat-label>Data de nascimento</mat-label>
+                    <input matInput formControlName="birthDate" placeholder="00/00/0000">
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" formControlName="password" placeholder="No mínimo 8 caracteres, Letras e número">
+            </mat-form-field>
+
+            <button mat-raised-button color="accent" class="full-width" type="submit">Cadastre-se grátis</button>
+            <button mat-raised-button color="white" class="full-width google-button">
+                <img src="assets\images\google-logo.png" alt="Google Logo"> Continuar com Google
+            </button>
+        </form>
+        <p>Já tem uma conta? <a href="/login">Faça login</a></p>
+    </mat-card>
+</ng-template>
+
